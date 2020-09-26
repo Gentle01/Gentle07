@@ -2,19 +2,21 @@
 <html lang="en">
 
 <head>
-    <div class="bg"></div>
+
 
     <title>Gentle简历博客</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="stylesheet" href="https://unpkg.com/animate.css@3.5.2/animate.min.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+<!-- 添加滚动事件监听，监听对象  ID？ -->
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
 
+    <!-- <div class="bg"></div> -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
@@ -22,62 +24,509 @@
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
     <!-- 导航栏 -->
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
+    <div class="container"></div>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark  fixed-top">
 
         <!-- 导航栏标题 -->
-        <span class="navbar-text navbar-brand">Gentle02博客</span>
+        <span class="navbar-brand ">Gentle02博客</span>
 
         <!-- 折叠菜单的按钮 -->
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar"> 
-            <span class="navbar-toggler-icon"></span></button>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <!-- 导航 -->
-        <div class="collapse  navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav " style="margin-left: auto; cursor: pointer;">
+        <div class="collapse    navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav    " style="margin-left: auto;">
                 <li class="navbar-item">
-                    <a class="nav-link " href="#section1">关于我</a>
+                    <a class="nav-link  " href="#section1">关于我</a>
                 </li>
                 <li class="navbar-item">
                     <a class="nav-link" href="#section2">求职意向</a>
                 </li>
                 <li class="navbar-item">
-                    <a class="nav-link">作品集</a>
+                    <a class="nav-link" href="#seciton3">作品集</a>
                 </li>
                 <li class="navbar-item">
-                    <a class="nav-link">技术掌握</a>
+                    <a class="nav-link" href="#section4">技术掌握</a>
                 </li>
                 <li class="navbar-item">
                     <a class="nav-link">我的经历</a>
                 </li>
                 <li class="navbar-item">
-                    <a class="nav-link">联系我</a>
+                    <a class="nav-link" href="#section6">联系我</a>
                 </li>
             </ul>
         </div>
     </nav>
-    <!-- 关于我的info -->
-    <div class="row">
 
-        <div class="col text-center">
-            <h1 class="font-weight-light" style="color: azure;">关于我</h1>
-            <div class="jumbotron-fluid text-center">
-
-                <img class="rounded-circle img-fluid" src="./static/blog_photoimg.jpg" style="opacity: 0.7; "></div>
+    <!-- 进度条 -->
+    <div class="diyP">
+        <div class="progress  " style="height: 10px;">
+            <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" style="width: 100%;"></div>
         </div>
-
     </div>
+    <hr>
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col">
+                <!-- 关于tip1 -->
+                <div class="about-box  " id="section1">
+                    <div class="about-title">
+                        <h2>关于我</h2>
+                        <hr style="width: 3.75rem; height: 0.1875rem; background-color: chocolate;">
+                    </div>
+                    <img class="rounded-circle" src="./static/blog_photoimg.jpg">
+                    <div class="about-des">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我叫Gentle，23岁，坐标成都，是一名前端爱好者。喜欢开源技术，热爱分享！</p>
+                        <p>www.Gentle02.com</p>
+                        <p>书山有路勤为径，学海无涯苦作舟！</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid ">
+        <div class="row text-center ">
+            <div class="col">
+                <!-- 求职意向 -->
+                <div class="hope " id="section2">
+                    <div class="about-title">
+                        <h2>求职意向</h2>
+                        <hr style="width: 3.75rem; height: 0.1875rem; background-color: chocolate;">
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="Job_box">
+                                <div class=job_icon>
+                                    <img src="./static/web.png " alt="切图">
+                                </div>
+                                <div class="job_skill_des">
+                                    <p class="job_skill_tit">PS切图</p>
+                                    <span>从PSD上切出页面需要的图片</span>
+                                    <span> 将小图标合成spirts优化。</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="Job_box">
+                                <div class=job_icon>
+                                    <img src="./static/css.png " alt="网页">
+                                </div>
+                                <div class="job_skill_des">
+                                    <p class="job_skill_tit">网页制作</p>
+                                    <span>响应式页面,简单不冗余代码。</span>
+                                    <span>css3流畅动画效果，兼容不同浏览器。</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="Job_box">
+                                <div class=job_icon>
+                                    <img src="./static/js.png " alt="javascprit">
+                                </div>
+                                <div class="job_skill_des">
+                                    <p class="job_skill_tit">前端功能</p>
+                                    <span>用JS完成常见的前端功能特效</span>
+                                    <span> 用AJAX读取后台数据。 </span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="Job_box">
+                                <div class=job_icon>
+                                    <img src="./static/h5.png " alt="h5">
+                                </div>
+                                <div class="job_skill_des">
+                                    <p class="job_skill_tit">H5页面</p>
+                                    <span>移动端页面的书写</span>
+                                    <span>兼容平板、安卓、IOS不同终端。 </span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 作品集 -->
+    <div class="container-fluid">
+        <div class="col text-center">
+            <div class="row">
+
+                <div class="zp_t" id="seciton3">
+                    <div class="about-title">
+                        <h2>作品集</h2>
+                        <hr style="width: 3.75rem; height: 0.1875rem; background-color: chocolate;">
+                        <p>学习是一个充实愉悦的过程 喜欢尝试，期待新鲜事物 前端即兴趣，兴趣即未来 行路有良友，便是捷径 期待有机会与您共事！
+                        </p>
+                    </div>
+                </div>
+                <div class="container zpj">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="zp_img">
+                                <img src="./static/zp/01.jpg">
+                                <!-- <div class="zp_img_des">
+                                    <p>商城类页面</p>
+                                    <p>购物车结算jq，订单的选择或删除、金额的计算。</p>
+                                    <img width="30px" height="30px" src="./static/zp/search.png" alt="搜索">
+                                </div> -->
+
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="zp_img">
+                                <img src="./static/zp/02.jpg">
+                            </div>
+
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="zp_img">
+                                <img src="./static/zp/03.jpg">
+                            </div>
+
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="zp_img">
+                                <img src="./static/zp/04.jpg">
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6">
+                            <div class="zp_img">
+                                <img src="./static/zp/05.jpg">
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6">
+                            <div class="zp_img">
+                                <img src="./static/zp/06.jpg">
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6">
+                            <div class="zp_img">
+                                <img src="./static/zp/07.jpg">
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6">
+                            <div class="zp_img">
+                                <img src="./static/zp/08.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- 技术掌握 -->
+    <div class="container-fluid">
+        <div class="skill" id="section4">
+            <div class="row text-center">
+                <div class="col">
+                    <div class="about-title">
+                        <h2>技术掌握</h2>
+                        <hr style="width: 3.75rem; height: 0.1875rem; background-color: chocolate;">
+                    </div>
+                </div>
+            </div>
+            <div class="row text-right">
+
+                <div class="col-md-6 col-sm-12">
+                    <div class="skill_box">
+                        <p class="text-left">Html+Css</p>
+                        <div class="skill_label">
+                            <div class="progress" style="height: 9px; ">
+                                <div class="progress-bar progress-bar-striped " style="width: 70%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill_rg">精通</div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12">
+                    <div class="skill_box">
+                        <p class="text-left">JavaScript</p>
+                        <div class="skill_label">
+                            <div class="progress" style="height: 9px; ">
+                                <div class="progress-bar progress-bar-striped" style="width: 30%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill_rg">熟悉</div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-sm-12">
+                    <div class="skill_box">
+                        <p class="text-left">Vue.js</p>
+                        <div class="skill_label">
+                            <div class="progress" style="height: 9px; ">
+                                <div class="progress-bar progress-bar-striped" style="width: 30%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill_rg">熟悉</div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-sm-12">
+                    <div class="skill_box">
+                        <p class="text-left">Bootstarp+Ps</p>
+                        <div class="skill_label">
+                            <div class="progress" style="height: 9px; ">
+                                <div class="progress-bar progress-bar-striped" style="width: 60%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill_rg">良好</div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-sm-12">
+                    <div class="skill_box">
+                        <p class="text-left">UniAPP+HbuildX</p>
+                        <div class="skill_label">
+                            <div class="progress" style="height: 9px; ">
+                                <div class="progress-bar progress-bar-striped " style="width: 40%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill_rg">熟悉</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- 我的经历 -->
+
+
+    <!-- 联系我 -->
+
+    <div class="container-fluid">
+        <div class="wx text-center" id="section6">
+            <h2>联系我</h2>
+            <hr style="width: 3.75rem; height: 0.1875rem; background-color: chocolate;">
+            <div class="ws_pic">
+                <img class="img-fluid" style="width: 200px ; height: 200px;" src="./static/Gentle02.jpg" alt="Wx_code">
+
+            </div>
+            <lead style="font-size:10px">微信扫一扫,添加我为好友!</lead>
+            <div style="text-align: center; margin-bottom: 0px;">
+                <p class="center beian">© Gentle02 | <a href="#">蜀ICP备16017234号</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="gotop" id="top" title="顶部">
+        <img src="./static/top.png " alt="回到顶部 ">
+    </div>
+    <!-- 判断滚动的距离是否超过一屏  ,超过显示返回顶部  ,否者不显示 -->
+
+
+
+
+    <script>
+        // 获取当前页面高度
+        pageheight = $(window).height()
+        $(window).scroll(function() {
+            const scrollheight = $(window).scrollTop()
+            if (scrollheight > pageheight) {
+                $('#top').fadeIn(800)
+            } else {
+                $('#top').fadeOut(500)
+            }
+        })
+
+
+
+        $("#top").click(function() {
+            $('html,body').animate({
+                scrollTop: 0
+            }, 1000)
+        })
+    </script>
+
 
 </body>
 
 </html>
 <style>
+    body {
+        margin: 0px;
+        padding: 0px;
+    }
+    
     .bg {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: url("./static/131105112106-0.jpg") no-repeat rgb(78, 61, 61);
+        background: url("./static/131105112106-0.jpg ") no-repeat rgb(78, 61, 61);
         background-size: cover;
         z-index: -1;
+    }
+    
+    .diyP {
+        position: fixed;
+        top: 50px;
+        width: 100%;
+        z-index: 2;
+    }
+    /* 关于我 */
+    
+    .about-box {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 70px 0px 70px 0px;
+    }
+    
+    .about-title {
+        margin-bottom: 3.125rem;
+    }
+    
+    .about-des {
+        color: #8a8282;
+        margin: 20px auto;
+        /* background-color: black; */
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        width: 60%;
+    }
+    /* 求职意向 */
+    
+    .hope {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        background-image: url('./static/services-bg.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 70px 0px 70px 0px;
+    }
+    
+    .col-sm-6 {
+        width: 50%;
+    }
+    
+    .Job_box {
+        padding: 10px;
+    }
+    
+    .job_icon {
+        max-width: 100%;
+        margin: auto;
+    }
+    
+    .job_skill_des {
+        margin: auto;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        width: 70%;
+        padding-bottom: 60px;
+    }
+    
+    .job_skill_tit {
+        color: coral;
+        font-weight: bold;
+        margin: 10px auto;
+    }
+    
+    .job_skill_tit span {
+        color: darkblue;
+    }
+    /* 作品集 */
+    
+    .zp_t {
+        width: 100%;
+        padding-top: 70px;
+        background-color: #fff;
+    }
+    
+    .zpj {
+        width: 100%;
+        background-color: #fff;
+    }
+    
+    .zp_img {
+        width: 100%;
+        margin: 20px auto;
+    }
+    
+    .zp_img img {
+        max-width: 100%;
+        margin: auto;
+        cursor: pointer;
+        transition: transform 2s;
+    }
+    
+    .zp_img img:hover {
+        transform: scale(1.1);
+    }
+    /* 技能掌握 */
+    
+    .skill {
+        width: 100%;
+        padding: 70px;
+        background-color: #fff;
+        margin-top: 70px auto;
+    }
+    
+    .skill_box {
+        width: 100%;
+        color: blue;
+    }
+    
+    .skill_label {
+        width: 100%;
+    }
+    
+    .wx {
+        height: 500px;
+    }
+    
+    .ws_pic {
+        margin-top: 110px;
+    }
+    /* 回到顶部 */
+    
+    .gotop {
+        position: fixed;
+        display: flex;
+        right: 30px;
+        bottom: 30px;
+        width: 50px;
+        height: 50px;
+        background-color: #c3c3c3;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .gotop img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .gotop:hover {
+        background-color: #696565;
+        cursor: pointer;
     }
 </style>
